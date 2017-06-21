@@ -1,0 +1,16 @@
+{
+    "version": "0.1.0",
+    "command": "go",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "options": {
+        "cwd": "${fileDirname}"
+    },
+    "tasks": [
+        {
+            "taskName": "test",
+            "args": [ "-v", "-cover", "-race", "-ldflags", "-X main.buildMode=debug"],
+            "isTestCommand": true
+        }
+    ]
+}
